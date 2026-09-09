@@ -1,1 +1,81 @@
+<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Fira Code', monospace">
+  <defs>
+    <style>
+      .bg { fill: #0D1117; }
+      .box { fill: #0A2342; stroke: #0066CC; stroke-width: 2; rx: 10; opacity: 0; transform-origin: center; animation: popIn 0.6s ease-out forwards, glow 2.5s ease-in-out infinite; }
+      .label { fill: #ffffff; font-size: 15px; font-weight: 600; text-anchor: middle; opacity: 0; animation: fadeText 0.6s ease-out forwards; }
+      .arrow { stroke: #00C9FF; stroke-width: 3; fill: none; stroke-dasharray: 40; stroke-dashoffset: 40; animation: draw 0.8s ease-out forwards; }
+      .arrowhead { fill: #00C9FF; opacity: 0; animation: fadeText 0.4s ease-out forwards; }
+      
+      .s1 { animation-delay: 0s, 0s; }
+      .s2 { animation-delay: 1s, 0.3s; }
+      .s3 { animation-delay: 2s, 0.6s; }
+      .s4 { animation-delay: 3s, 0.9s; }
+      .s5 { animation-delay: 4s, 1.2s; }
+      .s6 { animation-delay: 5s, 1.5s; }
+      
+      .t1 { animation-delay: 0.3s; }
+      .t2 { animation-delay: 1.3s; }
+      .t3 { animation-delay: 2.3s; }
+      .t4 { animation-delay: 3.3s; }
+      .t5 { animation-delay: 4.3s; }
+      .t6 { animation-delay: 5.3s; }
+      
+      .a1 { animation-delay: 0.7s; }
+      .a2 { animation-delay: 1.7s; }
+      .a3 { animation-delay: 2.7s; }
+      .a4 { animation-delay: 3.7s; }
+      .a5 { animation-delay: 4.7s; }
+      
+      @keyframes popIn { 0% { opacity: 0; transform: scale(0.7); } 100% { opacity: 1; transform: scale(1); } }
+      @keyframes fadeText { 0% { opacity: 0; } 100% { opacity: 1; } }
+      @keyframes glow { 0%, 100% { stroke: #0066CC; } 50% { stroke: #00C9FF; } }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+    </style>
+  </defs>
 
+  <rect class="bg" width="900" height="260" rx="14"/>
+
+  <!-- Row 1 -->
+  <rect class="box s1" x="20"  y="40" width="150" height="60" rx="10"/>
+  <text class="label t1" x="95" y="65">📋 Analysis</text>
+  <text class="label t1" x="95" y="85" font-size="11" fill="#a8d8ea">Requirements</text>
+
+  <path class="arrow a1" d="M175 70 L225 70" marker-end="url(#head)"/>
+
+  <rect class="box s2" x="230" y="40" width="150" height="60" rx="10"/>
+  <text class="label t2" x="305" y="65">🧪 Test Design</text>
+  <text class="label t2" x="305" y="85" font-size="11" fill="#a8d8ea">Case Writing</text>
+
+  <path class="arrow a2" d="M385 70 L435 70" marker-end="url(#head)"/>
+
+  <rect class="box s3" x="440" y="40" width="150" height="60" rx="10"/>
+  <text class="label t3" x="515" y="65">▶️ Execution</text>
+  <text class="label t3" x="515" y="85" font-size="11" fill="#a8d8ea">Manual + Playwright</text>
+
+  <!-- Connector down -->
+  <path class="arrow a3" d="M515 100 L515 150" marker-end="url(#head)"/>
+
+  <!-- Row 2 (reversed direction) -->
+  <rect class="box s4" x="440" y="160" width="150" height="60" rx="10"/>
+  <text class="label t4" x="515" y="185">🐞 Bug Report</text>
+  <text class="label t4" x="515" y="205" font-size="11" fill="#a8d8ea">Log &amp; Track</text>
+
+  <path class="arrow a4" d="M435 190 L385 190" marker-end="url(#head)"/>
+
+  <rect class="box s5" x="230" y="160" width="150" height="60" rx="10"/>
+  <text class="label t5" x="305" y="185">🔁 Retest</text>
+  <text class="label t5" x="305" y="205" font-size="11" fill="#a8d8ea">Fix Verification</text>
+
+  <path class="arrow a5" d="M225 190 L175 190" marker-end="url(#head)"/>
+
+  <rect class="box s6" x="20"  y="160" width="150" height="60" rx="10"/>
+  <text class="label t6" x="95" y="185">📉 Regression</text>
+  <text class="label t6" x="95" y="205" font-size="11" fill="#a8d8ea">Sign-off ✅</text>
+
+  <defs>
+    <marker id="head" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path class="arrowhead" d="M0,0 L8,4 L0,8 Z"/>
+    </marker>
+  </defs>
+</svg>
